@@ -71,9 +71,28 @@ img{
     display: table;
     clear: both;
   }
+  .section-title{
+    display: block;
+    font-family: 'Gotham Medium', sans-serif;
+    font-size: 1.8em;
+    color: $branco;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    padding-bottom: 1em;
+  }
+}
+.box{
+  background-color: $branco;
+  padding: 20px;
+  -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 /*home*/
 .home{
+  display: none;
   padding-top: 30px;
   .logo{
     text-align: center;
@@ -172,7 +191,7 @@ img{
 }
 /*navigation*/
 .nav{
-  display: none;
+  //display: none;
   z-index: 2;
   background-color: $primary-btn-color;
   position: absolute;
@@ -223,6 +242,67 @@ img{
       font-family: 'Gotham Medium';
       font-size: 11px;
       text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    }
+  }
+}
+/*linhas*/
+.linhas{
+  display: none;
+  padding-top: 75px;
+  .linha-id{
+    display: block;
+    font-family: 'Gotham Light', sans-serif;
+    font-size: 1.4em;
+    padding-bottom: 10px;
+  }
+  .linha-name{
+    display: block;
+    font-family: 'Gotham Medium', sans-serif;
+    font-size: 1em;
+    color: #333;
+  }
+  .see-more{
+    color: $primary-btn-color;
+    display: block;
+    font-family: 'Gotham Medium', sans-serif;
+    font-size: 12px;
+    line-height: 1.2em;
+    text-decoration: underline;
+    padding-top: 1em;
+  }
+}
+/*sentidos*/
+.sentidos{
+  padding-top: 75px;
+  .sentido{
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .sentido-infos{
+    text-align: center;
+    .sentido-name{
+      display: block;
+      font-family: 'Gotham Medium', sans-serif;
+      font-size: 1em;
+      color: #333;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  .sentido-btn{
+    position: absolute;
+    bottom: -28px;
+    right: 0;
+    background-color: $primary-btn-color;
+    padding: 5px 10px;
+    -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    span{
+      color: $branco;
+      font-family: 'Gotham Medium', sans-serif;
+      font-size: 12px;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.2);
     }
   }
 }
