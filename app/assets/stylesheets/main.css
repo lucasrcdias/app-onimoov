@@ -1,0 +1,218 @@
+/* vars */
+/* gotham */
+@font-face {
+  font-family: 'Gotham Light';
+  src: url('../fonts/Gotham-Light.otf'); }
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('../fonts/Gotham-Book.otf'); }
+
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('../fonts/Gotham-Medium.otf'); }
+
+/* code */
+/* line 34, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+/* line 39, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+body {
+  font-family: 'Gotham Book', sans-serif;
+  font-size: 15px; }
+
+/* line 43, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+a {
+  text-decoration: none;
+  color: #000; }
+
+/* line 48, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+ul, ol {
+  list-style: none; }
+
+/* line 51, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* common */
+/* line 56, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+.container {
+  padding-left: 25px;
+  padding-right: 25px; }
+
+/* line 60, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+.section {
+  position: relative;
+  background: linear-gradient(270deg, #9b59b6, #8e44ad);
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-shadow: inset 2px 7px 25px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 2px 7px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 2px 7px 25px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; }
+  /* line 69, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .section:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+/*home*/
+/* line 76, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+.home {
+  padding-top: 30px; }
+  /* line 78, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .home .logo {
+    text-align: center; }
+  /* line 81, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .home .search-form {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    /* line 85, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .home .search-form .search-input, .home .search-form .search-btn {
+      width: 100%;
+      padding: 1em;
+      border: none;
+      border-radius: 2px;
+      -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1); }
+      /* line 93, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+      .home .search-form .search-input:focus, .home .search-form .search-btn:focus {
+        outline: none;
+        -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2); }
+    /* line 100, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .home .search-form .search-input {
+      background-color: #FFF;
+      margin-bottom: 10px; }
+    /* line 104, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .home .search-form .search-btn {
+      background-color: #37d077;
+      color: #FFF;
+      font-family: 'Gotham Medium', sans-serif;
+      font-size: 16px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+  /* line 112, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .home .voice-wrapper {
+    margin-top: 3em; }
+    /* line 114, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .home .voice-wrapper .voice-toggler {
+      width: 80px;
+      height: 80px;
+      background-color: #713b87;
+      padding: 1.65em 0;
+      border-radius: 100%;
+      margin: 0 auto;
+      -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+      box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+      text-align: center; }
+      /* line 125, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+      .home .voice-wrapper .voice-toggler i {
+        color: #FFF;
+        font-size: 2.1em;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
+
+/*voice*/
+/* line 134, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+.voice-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9); }
+  /* line 142, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .voice-overlay .voice-message {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center; }
+    /* line 147, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .voice-overlay .voice-message h1 {
+      color: #FFF;
+      font-family: 'Gotham Medium';
+      font-size: 20px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+      margin-bottom: 10px; }
+    /* line 154, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .voice-overlay .voice-message i {
+      font-size: 2em;
+      color: #e74c3c; }
+  /* line 159, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .voice-overlay .voice-cancel {
+    position: absolute;
+    width: 100%;
+    bottom: 3em;
+    text-align: center; }
+    /* line 164, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .voice-overlay .voice-cancel span {
+      color: #FFF;
+      font-family: 'Gotham Medium';
+      font-size: 14px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+      text-decoration: underline; }
+
+/*navigation*/
+/* line 174, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+.nav {
+  display: none;
+  z-index: 2;
+  background-color: #37d077;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+  /* line 187, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .nav:after {
+    content: '';
+    display: table;
+    clear: both; }
+  /* line 192, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .nav div {
+    padding: 5px; }
+  /* line 195, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .nav .nav-search {
+    float: left; }
+    /* line 197, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .nav .nav-search .search-btn {
+      border: none;
+      background-color: transparent;
+      color: #FFF; }
+    /* line 202, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .nav .nav-search .search-input {
+      font-family: 'Gotham Medium';
+      font-size: 12px;
+      color: #FFF;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #28ac5f; }
+      /* line 209, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+      .nav .nav-search .search-input:focus {
+        outline: none; }
+  /* line 214, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+  .nav .favorites {
+    float: right;
+    background-color: #28ac5f;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); }
+    /* line 221, C:/Users/Lucas/Documents/Sites/ihc/app/assets/stylesheets/main.scss */
+    .nav .favorites span {
+      color: #FFF;
+      font-family: 'Gotham Medium';
+      font-size: 11px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+
+/*# sourceMappingURL=main.css.map */

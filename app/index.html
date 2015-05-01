@@ -1,0 +1,56 @@
+<!doctype HTML>
+<html lang="pt-br">
+
+<head lang="pt-br">
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Onimoov - Horário do ônibus na palma da sua mão!</title>
+  <link href="assets/stylesheets/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/stylesheets/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav" role="navigation">
+    <div class="nav-search">
+      <button class="search-btn" data-input="nav-input"><i class="fa fa-search"></i></button>
+      <input type="text" class="search-input" id="nav-input">
+    </div>
+    <div class="favorites">
+      <span>FAVORITOS <i class="fa fa-heart"></i></span>
+    </div>
+  </nav>
+  <section class="section home">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/images/onimoov-logo-app.png" alt="Onimoov Logo">
+      </div>
+      <div class="search-form">
+        <input type="text" class="search-input" placeholder="Digite o número ou nome da linha" id="search-input">
+        <button class="search-btn"  data-input="search-input">PESQUISAR</button>
+      </div>
+      <div class="voice-wrapper">
+        <div class="voice-toggler">
+          <i class="fa fa-microphone"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="voice-overlay">
+    <div class="voice-message">
+      <h1>FALE AGORA</h1>
+      <i class="fa fa-microphone"></i>
+    </div>
+    <div class="voice-cancel">
+      <span>cancelar</span>
+    </div>
+  </section>
+  <script src="assets/javascript/jquery.js"></script>
+  <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
