@@ -71,8 +71,15 @@ img{
     display: table;
     clear: both;
   }
+  .section-header{
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
   .section-title{
-    display: block;
+    float: left;
     font-family: 'Gotham Medium', sans-serif;
     font-size: 1.8em;
     color: $branco;
@@ -80,6 +87,14 @@ img{
     text-decoration: underline;
     text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     padding-bottom: 1em;
+  }
+  .go-back{
+    float: right;
+    color: $branco;
+    font-family: 'Gotham Medium', sans-serif;
+    font-size: 12px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    text-decoration: underline;
   }
 }
 .box{
@@ -274,6 +289,7 @@ img{
 /*sentidos*/
 .sentidos{
   padding-top: 75px;
+  display: none;
   .sentido{
     position: relative;
     margin-bottom: 50px;
@@ -303,6 +319,91 @@ img{
       font-family: 'Gotham Medium', sans-serif;
       font-size: 12px;
       text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    }
+  }
+}
+/*favoritos*/
+.favoritos{
+  display: none;
+  padding-top: 75px;
+  .favorito{
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .favorito-infos{
+    .linha-id{
+      display: block;
+      font-family: 'Gotham Light', sans-serif;
+      font-size: 1.4em;
+      padding-bottom: 10px;
+    }
+    .linha-name{
+      display: block;
+      font-family: 'Gotham Medium', sans-serif;
+      font-size: 1em;
+      color: #333;
+    }
+  }
+  .box-btn{
+    position: absolute;
+    bottom: -28px;
+    padding: 5px 10px;
+    -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    span{
+      color: $branco;
+      font-family: 'Gotham Medium', sans-serif;
+      font-size: 12px;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    }
+  }
+  .see-more-btn{
+    left: 0;
+    background-color: $primary-btn-color;
+  }
+  .delete-btn{
+    right: 0;
+    background-color: $primary-voice-color;
+  }
+}
+/*resultado*/
+.resultado{
+  padding-top: 75px;
+  .add-favorite{
+    border: none;
+    border-radius: 2px;
+    float: right;
+    text-align: center;
+    max-width: 90px;
+    padding: 5px;
+    background-color: $primary-btn-color;
+    color: $branco;
+    font-family: 'Gotham Medium', sans-serif;
+    font-size: 12px;
+    word-break: break-all;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  .info{
+    color: $branco;
+    font-family: 'Gotham Book', sans-serif;
+    font-size: 12px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+    padding-bottom: 1em;
+  }
+  .horario{
+    padding: 20px 10px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    .dias{
+      font-family: 'Gotham Book', sans-serif;
+      font-size: 12px;
+      i{
+        margin-left: 5px;
+      }
     }
   }
 }
