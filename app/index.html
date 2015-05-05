@@ -17,11 +17,11 @@
 <body>
   <nav class="nav" role="navigation">
     <div class="nav-search">
-      <button class="search-btn" data-input="nav-input"><i class="fa fa-search"></i>
+      <button class="search-btn" data-input="nav-search"><i class="fa fa-search"></i>
       </button>
-      <input type="text" class="search-input" id="nav-input">
+      <input type="text" class="search-input" id="nav-search">
     </div>
-    <div class="favorites">
+    <div class="favorites show-favorites">
       <span>FAVORITOS <i class="fa fa-heart"></i></span>
     </div>
   </nav>
@@ -31,8 +31,9 @@
         <img src="assets/images/onimoov-logo-app.png" alt="Onimoov Logo">
       </div>
       <div class="search-form">
-        <input type="text" class="search-input" placeholder="Digite o número ou nome da linha" id="search-input">
-        <button class="search-btn" data-input="search-input">PESQUISAR</button>
+        <input type="text" class="search-input" id="home-search" placeholder="Digite o número ou nome da linha" id="search-input">
+        <button class="search-btn" data-input="home-search">PESQUISAR</button>
+        <span class="show-favorites">MEUS FAVORITOS</span>
       </div>
       <div class="voice-wrapper">
         <div class="voice-toggler">
@@ -79,24 +80,6 @@
       <div class="section-header">
         <h1 class="section-title">237</h1>
         <span class="go-back">voltar</span>
-      </div>
-      <div class="box sentido">
-        <div class="sentido-infos">
-          <span class="sentido-name">Parque Novo Horizonte</span>
-          <i class="fa fa-arrow-down"></i>
-          <span class="sentido-name">Jardim Aquarius</span>
-        </div>
-        <div class="sentido-btn"><span>VER HORÁRIO</span>
-        </div>
-      </div>
-      <div class="box sentido">
-        <div class="sentido-infos">
-          <span class="sentido-name">Jardim Aquarius</span>
-          <i class="fa fa-arrow-down"></i>
-          <span class="sentido-name">Parque Novo Horizonte</span>
-        </div>
-        <div class="sentido-btn"><span>VER HORÁRIO</span>
-        </div>
       </div>
     </div>
   </section>
@@ -159,7 +142,7 @@
         <h1 class="dias">DE SEGUNDA-FEIRA A SEXTA-FEIRA <i class="fa fa-angle-down"></i></h1>
       </div>
       <div class="result" id="1">
-        <!--<table>
+        <table>
           <thead>
             <tr>
               <td>0 às 6h</td>
@@ -194,20 +177,94 @@
               <td>23:40(8)</td>
             </tr>
           </tbody>
-        </table>!-->
+        </table>
       </div>
       <div class="box horario show-result" data-result="2">
         <h1 class="dias">AOS SÁBADOS <i class="fa fa-angle-down"></i></h1>
       </div>
-      <div class="result" id="2"></div>
+      <div class="result" id="2">
+        <table>
+          <thead>
+            <tr>
+              <td>0 às 6h</td>
+              <td>6 às 12h</td>
+              <td>12 às 18h</td>
+              <td>18 às 24h</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05:50(1)</td>
+              <td>06:00(2)</td>
+              <td>14:15(5)</td>
+              <td>18:45(7)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>09:50(3)</td>
+              <td>17:15(6)</td>
+              <td>20:15</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>11:50(4)</td>
+              <td></td>
+              <td>21:30</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>23:40(8)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="box horario show-result" data-result="3">
         <h1 class="dias">AOS DOMINGOS E FERIADOS <i class="fa fa-angle-down"></i></h1>
       </div>
-      <div class="result" id="3"></div>
+      <div class="result" id="3">
+        <table>
+          <thead>
+            <tr>
+              <td>0 às 6h</td>
+              <td>6 às 12h</td>
+              <td>12 às 18h</td>
+              <td>18 às 24h</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05:50(1)</td>
+              <td>06:00(2)</td>
+              <td>14:15(5)</td>
+              <td>18:45(7)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>09:50(3)</td>
+              <td>17:15(6)</td>
+              <td>20:15</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>11:50(4)</td>
+              <td></td>
+              <td>21:30</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>23:40(8)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
   <script src="assets/javascript/jquery.js"></script>
-  <script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/application.js"></script>
 </body>
 
 </html>

@@ -7,11 +7,12 @@ $pomegranate: #c0392b;
 
 $amethyst: #9b59b6;
 $wisteria: #8e44ad;
-
 $emerald: #37d077;
+$belize-hole: #3498db;
+$nephritis: #2980b9;
 
-$primary-color: $amethyst;
-$secondary-color: $wisteria;
+$primary-color: $belize-hole;
+$secondary-color: $nephritis;
 
 $primary-voice-color: $alizarin;
 $secondary-voice-color: $pomegranate;
@@ -39,6 +40,7 @@ $primary-btn-color: $emerald;
 body{
   font-family: 'Gotham Book', sans-serif;
   font-size: 15px;
+  background: linear-gradient(270deg, $primary-color, $secondary-color);
 }
 a{
   text-decoration: none;
@@ -58,8 +60,9 @@ img{
   padding-right: 25px;
 }
 .section{
+  display: none;
   position: relative;
-  background: linear-gradient(270deg, $primary-color, $secondary-color);
+  background-color: transparent;
   width: 100vw;
   height: 100vh;
   -webkit-box-shadow: inset 2px 7px 25px rgba(0, 0, 0, 0.2);
@@ -107,7 +110,7 @@ img{
 }
 /*home*/
 .home{
-  display: none;
+  display: block;
   padding-top: 30px;
   .logo{
     text-align: center;
@@ -142,9 +145,19 @@ img{
       font-size: 16px;
       text-shadow: 0 1px 1px rgba(0,0,0,0.4);
     }
+    .show-favorites{
+      display: block;
+      padding-top: 1.5em;
+      font-family: 'Gotham Medium', sans-serif;
+      font-size: 12px;
+      color: $branco;
+      text-decoration: underline;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+      text-align: center;
+    }
   }
   .voice-wrapper{
-    margin-top: 3em;
+    display: none;
     .voice-toggler{
       width: 80px;
       height: 80px;
@@ -206,7 +219,7 @@ img{
 }
 /*navigation*/
 .nav{
-  //display: none;
+  display: none;
   z-index: 2;
   background-color: $primary-btn-color;
   position: absolute;
@@ -262,7 +275,6 @@ img{
 }
 /*linhas*/
 .linhas{
-  display: none;
   padding-top: 75px;
   .linha-id{
     display: block;
@@ -324,7 +336,6 @@ img{
 }
 /*favoritos*/
 .favoritos{
-  display: none;
   padding-top: 75px;
   .favorito{
     position: relative;
@@ -424,6 +435,7 @@ img{
           font-family: 'Gotham Medium', sans-serif;
           font-size: 12px;
           color: $branco;
+          text-shadow: 0 1px 1px rgba(0,0,0,0.4);
         }
       }
       td{
