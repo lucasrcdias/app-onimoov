@@ -4,7 +4,7 @@ $(function () {
       homeScreen = $(".home"),
       navbar = $(".nav"),
       query = '',
-      retornou = false;
+      alertBox = $(".alert");
 
   function toggleScreens(sc1, sc2, act) {
     if (!act.is(":visible")) {
@@ -37,7 +37,6 @@ $(function () {
                                            "  <div class='sentido-btn'><span>VER HORÁRIO</span>"+
                                            "  </div>"+
                                            "</div>");
-          retornou = true;
         }
       });
     });
@@ -56,12 +55,28 @@ $(function () {
                                                "  <span class='see-more'>VER</span>"+
                                                "</div>");
                 linhasEncontradas.push(this.numero);
-                $("#"+ this.numero).trigger('click');
-                retornou = true;
               }
             }
           });
         });
+  }
+  
+  function pesquisarPorIndex(indice){
+    var linhas = $.getJSON("assets/resources/linhas.json", function (data) {
+      console.log(data.linhas[indice].id);
+    });
+  }
+  
+  function showAlert(tipo, msg){
+    if(!alertBox.is(":visible")){
+      alertBox.addClass(tipo).append("<h1>"+msg+"</h1>").fadeIn();
+      window.setTimeout(function(){
+      alertBox.fadeOut(function(){
+        alertBox.removeClass(tipo);
+        $(".alert h1").remove();
+      });
+    }, 5000);
+    }
   }
   
   $(".show-favorites").click(function () {
@@ -75,18 +90,19 @@ $(function () {
       //console.log("Pesquisou pelo número da linha");
       $(".sentido").remove();
       pesquisarPorNumero(query);
-      if(retornou)
+      
+      if($(".sentidos .container").has(".sentido").length > 1)
         toggleScreens([activeScreen], [$(".sentidos"), $(".nav")], $(".sentidos"));
-      retornou = false;
+      else showAlert("error", "Nenhuma linha encontrada!");
     }
     else {
       //se entrar aqui, o termo pesquisado não é um número    
       //console.log("Não pesquisou pelo número da linha");
       $(".linha").remove();
       pesquisarPorPalavra(query);
-      if(retornou)
+      if($(".linhas .container").has(".linha").length > 1)
         toggleScreens([activeScreen], [$(".linhas"), $(".nav")], $(".linhas"));
-      retornou = false;
+      else showAlert("error", "Nenhuma linha encontrada!");
     }
   });
   
@@ -107,11 +123,10 @@ $(function () {
   $(document).on('click','[id^="sentido"]',function(){
     $(".sentido").remove();
     pesquisarPorNumero($(this).data("numero"))
-    if(retornou)
-      toggleScreens([activeScreen], [$(".resultado"), $(".nav")], $(".resultado"));
+    toggleScreens([activeScreen], [$(".resultado"), $(".nav")], $(".resultado"));
     retornou = false;
   });
-  
+  //botão para mostrar o horário, na pagina do resultado
   $(".show-result").click(function(){
     var s = $("#"+$(this).data("result"));
     if(!s.is(":visible")){
