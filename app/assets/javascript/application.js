@@ -20,14 +20,11 @@ $(function () {
     }
   }
   
-  function pesquisarPorNumero(num){
-    $(".section-title").text(num);
-    $(".sentido").remove();
-    var linhas = $.getJSON("assets/resources/linhas.json", function (data) {
-      $.each(data.linhas, function (i, item) {
-        if (this.numero == num) {
-          var ida = this.sentido.split("/")[0],
-              volta = this.sentido.split("/")[1];
+  function varrerLinhasPorNumero(data, num){
+    $.each(data.linhas, function (i, item) {
+        if (parseInt(item.numero) == num){
+          var ida = item.sentido.split("/")[0],
+              volta = item.sentido.split("/")[1];
           $(".sentidos .container").append("<div class='box sentido' id='sentido"+ i +"' data-index='"+ i +"'>"+
                                            "  <div class='sentido-infos'>"+
                                            "     <span class='sentido-name'>"+ida+"</span>"+
@@ -38,7 +35,23 @@ $(function () {
                                            "  </div>"+
                                            "</div>");
         }
-      });
+    });
+  }
+  
+  function pesquisarPorNumero(num){
+    $(".section-title").text(num);
+    $(".sentido").remove();
+    var linhas = $.getJSON("assets/resources/linhas.json", function (data) {
+      varrerLinhasPorNumero(data, num); //varre cada linha encontrada
+    }).done(function(){
+      if($(".sentido").length > 0){
+        alertBox.fadeOut(function(){
+          alertBox.removeClass("error");
+          $(".alert h1").remove();
+        });
+        toggleScreens([activeScreen], [$(".sentidos"), $(".nav")], $(".sentidos"));
+      }
+      else showAlert("error", "Nenhuma linha encontrada!");
     });
   }
   
@@ -47,7 +60,6 @@ $(function () {
         linhas = $.getJSON("assets/resources/linhas.json", function (data) {
           $.each(data.linhas, function (i, item) {
             if ((this.id.indexOf(pal.toUpperCase()) > -1 || this.itinerario.indexOf(pal.toUpperCase()) > -1)) {
-              //console.log(linhasEncontradas.indexOf(this.numero));
               if(linhasEncontradas.indexOf(this.numero) == -1){
                 $(".linhas .container").append("<div class='box linha' id='linha"+this.numero+"' data-numero="+ this.numero +">"+
                                                "  <span class='linha-id'>"+this.numero+"</span>"+
@@ -58,6 +70,15 @@ $(function () {
               }
             }
           });
+        }).done(function(){
+          if($(".linha").length > 0){
+            alertBox.fadeOut(function(){
+              alertBox.removeClass("error");
+              $(".alert h1").remove();
+            });
+            toggleScreens([activeScreen], [$(".linhas"), $(".nav")], $(".linhas"));
+          }
+          else showAlert("error", "Nenhuma linha encontrada!");
         });
   }
   
@@ -89,20 +110,13 @@ $(function () {
       //se entrar aqui, o termo pesquisado é um número    
       //console.log("Pesquisou pelo número da linha");
       $(".sentido").remove();
-      pesquisarPorNumero(query);
-      
-      if($(".sentidos .container").has(".sentido").length > 1)
-        toggleScreens([activeScreen], [$(".sentidos"), $(".nav")], $(".sentidos"));
-      else showAlert("error", "Nenhuma linha encontrada!");
+      pesquisarPorNumero(query);      
     }
     else {
       //se entrar aqui, o termo pesquisado não é um número    
       //console.log("Não pesquisou pelo número da linha");
       $(".linha").remove();
       pesquisarPorPalavra(query);
-      if($(".linhas .container").has(".linha").length > 1)
-        toggleScreens([activeScreen], [$(".linhas"), $(".nav")], $(".linhas"));
-      else showAlert("error", "Nenhuma linha encontrada!");
     }
   });
   
