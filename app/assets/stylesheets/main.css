@@ -122,23 +122,21 @@ img {
       text-decoration: underline;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
       text-align: center; }
-  .home .voice-wrapper {
-    display: none; }
-    .home .voice-wrapper .voice-toggler {
-      width: 80px;
-      height: 80px;
-      background-color: #1d6fa5;
-      padding: 1.65em 0;
-      border-radius: 100%;
-      margin: 0 auto;
-      -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
-      box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
-      text-align: center; }
-      .home .voice-wrapper .voice-toggler i {
-        color: #FFF;
-        font-size: 2.1em;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
+  .home .voice-wrapper .voice-toggler {
+    width: 80px;
+    height: 80px;
+    background-color: #1d6fa5;
+    padding: 1.65em 0;
+    border-radius: 100%;
+    margin: 0 auto;
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: center; }
+    .home .voice-wrapper .voice-toggler i {
+      color: #FFF;
+      font-size: 2.1em;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
 
 /*voice*/
 .voice-overlay {
@@ -152,15 +150,21 @@ img {
   .voice-overlay .voice-message {
     position: absolute;
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
     top: 40%;
     text-align: center; }
-    .voice-overlay .voice-message h1 {
+    .voice-overlay .voice-message h1, .voice-overlay .voice-message h2 {
+      display: none;
       color: #FFF;
       font-family: 'Gotham Medium';
       font-size: 20px;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
       margin-bottom: 10px; }
+    .voice-overlay .voice-message h2 {
+      display: block; }
     .voice-overlay .voice-message i {
+      margin-right: 10px;
       font-size: 2em;
       color: #e74c3c; }
   .voice-overlay .voice-cancel {
@@ -312,14 +316,16 @@ img {
 
 /*resultado*/
 .resultado {
-  padding-top: 75px; }
+  padding-top: 75px;
+  padding-bottom: 20px; }
   .resultado .add-favorite {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 2px;
-    float: right;
     text-align: center;
-    max-width: 90px;
-    padding: 5px;
+    padding: 10px;
     background-color: #37d077;
     color: #FFF;
     font-family: 'Gotham Medium', sans-serif;
@@ -336,6 +342,7 @@ img {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
     padding-bottom: 1em; }
   .resultado .horario {
+    display: none;
     padding: 20px 10px;
     margin-top: 20px;
     margin-bottom: 0; }

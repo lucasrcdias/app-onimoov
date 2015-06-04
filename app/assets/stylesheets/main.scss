@@ -157,7 +157,6 @@ img{
     }
   }
   .voice-wrapper{
-    display: none;
     .voice-toggler{
       width: 80px;
       height: 80px;
@@ -189,16 +188,23 @@ img{
   .voice-message{
     position: absolute;
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
     top: 40%;
     text-align: center;
-    h1{
+    h1, h2{
+      display: none;
       color: $branco;
       font-family: 'Gotham Medium';
       font-size: 20px;
       text-shadow: 0 1px 1px rgba(0,0,0,0.8);
       margin-bottom: 10px;
     }
+    h2 {
+      display: block;
+    }
     i{
+      margin-right: 10px;
       font-size: 2em;
       color: $primary-voice-color;
     }
@@ -381,13 +387,15 @@ img{
 /*resultado*/
 .resultado{
   padding-top: 75px;
+  padding-bottom: 20px;
   .add-favorite{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 2px;
-    float: right;
     text-align: center;
-    max-width: 90px;
-    padding: 5px;
+    padding: 10px;
     background-color: $primary-btn-color;
     color: $branco;
     font-family: 'Gotham Medium', sans-serif;
@@ -406,6 +414,7 @@ img{
     padding-bottom: 1em;
   }
   .horario{
+    display: none;
     padding: 20px 10px;
     margin-top: 20px;
     margin-bottom: 0;
