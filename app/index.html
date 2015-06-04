@@ -44,8 +44,22 @@
   </section>
   <section class="voice-overlay">
     <div class="voice-message">
-      <h1>FALE AGORA</h1>
-      <i class="fa fa-microphone"></i>
+      <h1 id="info_speak_now"><i class="fa fa-microphone"></i> Fale agora!</h1>
+          <h1 id="info_no_speech">Nenhuma voz detectada, talvez você precise <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+              ajustar seu microfone</a>!</h1>
+          <h1 id="info_no_microphone">
+            Nenhum microfone encontrado. Certifique-se de que tem um microfone instalado e as
+            <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+            configurações</a> estão corretas.</h1>
+          <h1 id="info_allow">Clique no botão "Permitir" acima para liberar o microfone.</h1>
+          <h1 id="info_denied">Permissão para usar o microfone negada.</h1>
+          <h1 id="info_blocked">A permissão para usar o microfone está bloqueada. Para mudar,
+            acesse: chrome://settings/contentExceptions#media-stream</h1>
+          <h1 id="info_upgrade">Web Speech API não é suportada por esse navegador.
+             Atualize para <a href="//www.google.com/chrome">Chrome</a>
+             versão 25 ou maior ou <span class="voice-cancel">pesquise por texto</span>.</h1>
+          <h2 id="final_span"></h2>
+          <h2 id="interim_span"></h2>
     </div>
     <div class="voice-cancel">
       <span>cancelar</span>
@@ -134,11 +148,13 @@
     <div class="container">
       <div class="section-header">
         <h1 class="section-title">237</h1>
-        <button class="add-favorite">ADICIONAR FAVORITO</button>
+        <span class="go-back">voltar</span>
       </div>
-      <h1 class="info">PARQUE NOVO HORIZONTE - JD. AQUARIUS (CIRCULAR NO JD.AQUARIUS) O.S.O 36</h1>
-      <h2 class="info">PARQUE NOVO HORIZONTE - JD. AQUARIUS</h2>
-      <div class="box horario show-result" data-result="1">
+      <h1 class="info" id="id-linha">PARQUE NOVO HORIZONTE - JD. AQUARIUS (CIRCULAR NO JD.AQUARIUS) O.S.O 36</h1>
+      <h2 class="info" id="sentido-linha">PARQUE NOVO HORIZONTE - JD. AQUARIUS</h2>
+      <button class="add-favorite">ADICIONAR AOS FAVORITOS</button>
+      
+      <div class="box horario show-result show1" data-result="1">
         <h1 class="dias">DE SEGUNDA-FEIRA A SEXTA-FEIRA <i class="fa fa-angle-down"></i></h1>
       </div>
       <div class="result" id="1">
@@ -179,7 +195,7 @@
           </tbody>
         </table>
       </div>
-      <div class="box horario show-result" data-result="2">
+      <div class="box horario show-result show2" data-result="2">
         <h1 class="dias">AOS SÁBADOS <i class="fa fa-angle-down"></i></h1>
       </div>
       <div class="result" id="2">
@@ -220,7 +236,7 @@
           </tbody>
         </table>
       </div>
-      <div class="box horario show-result" data-result="3">
+      <div class="box horario show-result show3" data-result="3">
         <h1 class="dias">AOS DOMINGOS E FERIADOS <i class="fa fa-angle-down"></i></h1>
       </div>
       <div class="result" id="3">
